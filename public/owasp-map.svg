@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" fill="none" font-family="JetBrains Mono, monospace">
+  <text x="60" y="70" fill="#E8EDF4" font-size="24">AegisGate controls × OWASP LLM Top 10</text>
+  <g font-size="15" fill="#5C6B7F">
+    <text x="60" y="125">RISK</text>
+    <text x="640" y="125">AEGISGATE CONTROL</text>
+    <text x="1160" y="125">STATUS</text>
+  </g>
+  <g stroke="#1E2532" stroke-width="1">
+    <line x1="60" y1="145" x2="1340" y2="145"/>
+    <line x1="60" y1="205" x2="1340" y2="205"/>
+    <line x1="60" y1="265" x2="1340" y2="265"/>
+    <line x1="60" y1="325" x2="1340" y2="325"/>
+    <line x1="60" y1="385" x2="1340" y2="385"/>
+    <line x1="60" y1="445" x2="1340" y2="445"/>
+    <line x1="60" y1="505" x2="1340" y2="505"/>
+    <line x1="60" y1="565" x2="1340" y2="565"/>
+    <line x1="60" y1="625" x2="1340" y2="625"/>
+    <line x1="60" y1="685" x2="1340" y2="685"/>
+    <line x1="60" y1="745" x2="1340" y2="745"/>
+  </g>
+  <g font-size="16">
+    <text x="60" y="188" fill="#9AA6B8">LLM01 Prompt Injection</text><text x="640" y="188" fill="#E8EDF4">Prompt Shields (direct + indirect)</text>
+    <text x="60" y="248" fill="#9AA6B8">LLM02 Sensitive Info Disclosure</text><text x="640" y="248" fill="#E8EDF4">PII detect / block / mask</text>
+    <text x="60" y="308" fill="#9AA6B8">LLM03 Supply Chain</text><text x="640" y="308" fill="#E8EDF4">Model provenance policy</text>
+    <text x="60" y="368" fill="#9AA6B8">LLM04 Data / Model Poisoning</text><text x="640" y="368" fill="#E8EDF4">Groundedness evaluator</text>
+    <text x="60" y="428" fill="#9AA6B8">LLM05 Improper Output Handling</text><text x="640" y="428" fill="#E8EDF4">Output scan channel</text>
+    <text x="60" y="488" fill="#9AA6B8">LLM06 Excessive Agency</text><text x="640" y="488" fill="#E8EDF4">Agent action policies</text>
+    <text x="60" y="548" fill="#9AA6B8">LLM07 System Prompt Leakage</text><text x="640" y="548" fill="#E8EDF4">Prompt shields · rule-change</text>
+    <text x="60" y="608" fill="#9AA6B8">LLM08 Vector / Embedding</text><text x="640" y="608" fill="#E8EDF4">Document scan + XPIA</text>
+    <text x="60" y="668" fill="#9AA6B8">LLM09 Misinformation</text><text x="640" y="668" fill="#E8EDF4">Quality + safety evaluators</text>
+    <text x="60" y="728" fill="#9AA6B8">LLM10 Unbounded Consumption</text><text x="640" y="728" fill="#E8EDF4">Rate / cost guardrails</text>
+  </g>
+  <g fill="#38E1C6">
+    <circle cx="1180" cy="183" r="5"/><circle cx="1180" cy="243" r="5"/><circle cx="1180" cy="303" r="5"/>
+    <circle cx="1180" cy="363" r="5"/><circle cx="1180" cy="423" r="5"/><circle cx="1180" cy="483" r="5"/>
+    <circle cx="1180" cy="543" r="5"/><circle cx="1180" cy="603" r="5"/><circle cx="1180" cy="663" r="5"/>
+    <circle cx="1180" cy="723" r="5"/>
+  </g>
+  <g font-size="13" fill="#5C6B7F">
+    <text x="1200" y="188">mapped</text><text x="1200" y="248">mapped</text><text x="1200" y="308">mapped</text>
+    <text x="1200" y="368">mapped</text><text x="1200" y="428">mapped</text><text x="1200" y="488">mapped</text>
+    <text x="1200" y="548">mapped</text><text x="1200" y="608">mapped</text><text x="1200" y="668">mapped</text>
+    <text x="1200" y="728">mapped</text>
+  </g>
+</svg>
