@@ -4,64 +4,34 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
+    --background: 222 30% 4%;
+    --foreground: 216 30% 93%;
+    --card: 220 26% 8%;
+    --card-foreground: 216 30% 93%;
+    --popover: 220 26% 8%;
+    --popover-foreground: 216 30% 93%;
+    --primary: 168 75% 55%;
+    --primary-foreground: 222 30% 4%;
+    --secondary: 220 20% 11%;
+    --secondary-foreground: 216 30% 93%;
+    --muted: 220 20% 11%;
+    --muted-foreground: 216 15% 65%;
+    --accent: 220 20% 11%;
+    --accent-foreground: 216 30% 93%;
+    --destructive: 352 88% 65%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --border: 219 24% 16%;
+    --input: 219 24% 16%;
+    --ring: 168 75% 55%;
     --radius: 0.625rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 222 28% 6%;
+    --sidebar-foreground: 216 30% 93%;
+    --sidebar-primary: 168 75% 55%;
+    --sidebar-primary-foreground: 222 30% 4%;
+    --sidebar-accent: 220 20% 11%;
+    --sidebar-accent-foreground: 216 30% 93%;
+    --sidebar-border: 219 24% 16%;
+    --sidebar-ring: 168 75% 55%;
   }
 }
 
@@ -69,7 +39,84 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: auto;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    background-color: #07090d;
+  }
+  code, pre, .font-mono {
+    font-feature-settings: "tnum";
+  }
+  h1, h2, h3 {
+    letter-spacing: -0.02em;
+  }
+  ::selection {
+    background: rgba(56, 225, 198, 0.25);
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b0e14;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e2532;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2a3242;
+  }
+}
+
+@layer utilities {
+  .glow-aegis {
+    box-shadow: 0 0 24px rgba(56, 225, 198, 0.15);
+  }
+  .glow-danger {
+    box-shadow: 0 0 24px rgba(245, 88, 107, 0.25);
+  }
+  .text-gradient-aegis {
+    background: linear-gradient(90deg, #38e1c6, #5b8cff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@keyframes scan-sweep {
+  0% { left: 0%; opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { left: calc(100% - 2px); opacity: 0; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes caret-blink-block {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.scan-sweep-line {
+  animation: scan-sweep 500ms ease-in-out forwards;
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.caret-block {
+  animation: caret-blink-block 1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-sweep-line, .pulse-dot, .caret-block {
+    animation: none;
   }
 }

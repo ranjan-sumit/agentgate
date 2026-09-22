@@ -4,7 +4,27 @@ module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+      },
       colors: {
+        "bg-0": "#07090D",
+        "bg-1": "#0B0E14",
+        "bg-2": "#10141C",
+        "bg-3": "#161B26",
+        line: "#1E2532",
+        "line-strong": "#2A3242",
+        "ink-hi": "#E8EDF4",
+        "ink-mid": "#9AA6B8",
+        "ink-low": "#5C6B7F",
+        aegis: "#38E1C6",
+        "aegis-dim": "#1A5F55",
+        azure: "#5B8CFF",
+        warn: "#F5B544",
+        danger: "#F5586B",
+        violet: "#9B7BFF",
+        "sev-med": "#F5823A",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
